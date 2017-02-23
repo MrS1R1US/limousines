@@ -15,44 +15,101 @@
     <!-- site -->
     <div class="site">
 
+        <!-- header -->
         <header class="site__header">
-            <div class="header__line">
+
+            <!-- header__line -->
+            <div class="header__wrapper">
+
+                <!-- logo -->
                 <h1 class="logo"></h1>
+                <!-- /logo -->
+
+                <!-- menu -->
                 <div class="menu">
+
+                    <!-- menu__btn -->
                     <button class="menu__btn"><span></span></button>
+                    <!-- /menu__btn -->
+
+                    <!-- menu__wrap -->
                     <div class="menu__wrap">
-                        <nav class="menu__wrap__links">
-                        <a href="#">Home</a>
-                        <a href="#">Notre flotte</a>
-                        <a href="#">Nos services</a>
-                        <a href="#">Notre philosophie</a>
-                        <a href="#">Contact</a>
+
+                        <!-- menu__item -->
+                        <nav class="menu__item">
+                            <a href="#">Home</a>
+                            <a href="#">Notre flotte</a>
+                            <a href="#">Nos services</a>
+                            <a href="#">Notre philosophie</a>
+                            <a href="#">Contact</a>
                         </nav>
-                        <a href="#" class="whitebutton"><i>BOOK NOW</i><span>7/7</span></a>
+                        <!-- /menu__item -->
+
+                        <!-- bookbutton -->
+                        <a href="#" class="bookbutton"><i>BOOK NOW</i><span>7/7</span></a>
+                        <!-- /bookbutton -->
+
+                        <!-- language -->
                         <div class="language">
-                            <ul>
-                                <li><a href="#">English</a><span class="icon"></span>
-                                <ul><li><a href="#">Néerlandais</a></li>
+
+                            <!-- language__current -->
+                            <div class="language__current">English<span class="icon"></span></div>
+                            <!-- /language__current -->
+
+                                <!-- language__choice -->
+                                <ul class="language__choice"><li><a href="#">Néerlandais</a></li>
                                     <li><a href="#">Français</a></li>
                                     <li><a href="#">Néerlandais</a></li>
                                 </ul>
-                                </li>
-                            </ul>
+                                <!-- /language__choice -->
+
                         </div>
+                        <!-- /language -->
+
                     </div>
+                    <!-- /menu__wrap -->
+
                 </div>
+                <!-- /menu -->
+
             </div>
+            <!-- /header__line -->
+
         </header>
-        <div class="promoinfo">
-            <div class="promoinfo__text">
-                <p>Where services meets excellence</p>
+        <!-- /header -->
+
+        <!-- hero -->
+        <div class="hero">
+
+            <!-- hero__info -->
+            <div class="hero__info">
+
+                <!-- hero__info__h1 -->
+                <div class="hero__title">
+                    <p>Where services meets excellence</p>
+                </div>
+                <!-- /hero__info__h1 -->
+
+                <!-- hero__play -->
+                <div class="hero__play">
+                    <a href="#" class="hero__play-btn" data-popup="video"></a>
+                    <span>Discover our fleet in action</span>
+                </div>
+                <!-- /hero__play -->
+
             </div>
+            <!-- /hero__info -->
+
+            <!-- hero__layout -->
+            <div class="hero__layout">
+                <video class="hero__layout__video" loop preload autoplay muted>
+                    <source src="video/Limousines.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- /hero__layout -->
+
         </div>
-        <div class="promovideo">
-            <video class="promovideo__hero" loop preload autoplay muted>
-                <source src="video/Limousines.mp4" type="video/mp4">
-            </video>
-        </div>
+        <!-- /hero -->
 
     </div>
     <!-- /site -->
@@ -64,8 +121,8 @@
         <div class="popup__wrap">
 
             <!-- popup__content -->
-            <div class="popup__content popup__text">
-
+            <div class="popup__content">
+vxzvzxvzxv
             </div>
             <!-- /popup__content -->
 
@@ -89,7 +146,15 @@
             }
         })
     </script>
-
+    <script type="text/javascript">
+        $('.video').on('click', function(){
+            if($('.popup').hasClass('popup_opened')) {
+                $('.popup').removeClass( 'popup_opened' )
+            }else {
+                $('.popup').addClass('popup_opened')
+            }
+        })
+    </script>
 
 </body>
 </html>

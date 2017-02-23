@@ -1,4 +1,4 @@
-.whitebutton {
+.bookbutton {
   width: 133px;
   line-height: 1px;
   background-color: #fff;
@@ -31,12 +31,12 @@
 
 @media (min-width: $desktop) {
 
-  .whitebutton {
+  .bookbutton {
     width: auto;
     position: absolute;
-    top: -8px;
-    right: 0;
-    line-height: 30px;
+    top: 0;
+    right: 1px;
+    line-height: 29px;
     background-color: #fff;
     border-radius: 25px;
     display: inline-block;
@@ -63,17 +63,17 @@
     }
 
   }
-  a.whitebutton:link,
-  a.whitebutton:visited,
-  a.whitebutton:active {
+  a.bookbutton:link,
+  a.bookbutton:visited,
+  a.bookbutton:active {
     color: #377ae6;
     font-size: 13px;
     font-family: "helvetica-medium", sans-serif;
 
   }
 
-  a.whitebutton:hover,
-  a.whitebutton.visited:hover {
+  a.bookbutton:hover,
+  a.bookbutton.visited:hover {
     color: #fff;
     background-color: #377ae6;
     -webkit-transition: all 0.3s ease;
