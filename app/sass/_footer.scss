@@ -1,0 +1,209 @@
+.footer{
+
+  &__about{
+    color: $footer-about-color;
+    line-height: 28px;
+    font-family: "helvetica-bold", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    display: block;
+    letter-spacing: .5px;
+    width: 90%;
+    margin: 0 auto 15px;
+  }
+
+  &__history{
+    display: block;
+    font-family: "genbas-regular", sans-serif;
+    font-size: 16px;
+    color: $footer-history-color;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    width: 90%;
+    margin: 0 auto 15px;
+  }
+
+  &__book {
+    height: 45px;
+    width: 156px;
+    padding-left: 25px;
+    position: relative;
+    margin: 0 auto 15px;
+
+    i {
+      font-style: normal;
+      text-align: left;
+      z-index: 1;
+      font-size: 15px;
+    }
+
+    span {
+      color: $btn-book-span-color;
+      background-color: $btn-book-span-back;
+      border-radius: 50%;
+      font-size: 12px;
+      width: 27px;
+      height: 27px;
+      display: inline-block;
+      line-height: 27px;
+      text-align: center;
+      margin-left: 10px;
+      z-index:1;
+    }
+
+  }
+
+  &__copyright{
+    color: $footer-copyright-color;
+    font-family: "helvetica-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    position: relative;
+    margin: 0 auto 15px;
+    width: 95%;
+    text-align: center;
+    
+    a:link,
+    a:active,
+    a:visited{
+      color: $footer-copyright-link-color;
+      text-decoration: none;;
+    }
+    
+  }
+
+  &__logo{
+    top:0;
+    left:0;
+    width: 120px;
+    position: relative;
+    margin: 0 auto 15px;
+    display: block;
+  }
+
+  &__developer{
+    color: $footer-developer-color;
+    font-family: "helvetica-regular", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+
+    a:link,
+    a:active,
+    a:visited{
+      color: $footer-copyright-link-color;
+      text-decoration: none;;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .footer {
+
+    &__about {
+      display: inline-block;
+      width: 325px;
+      margin: 0 20px 0 4px;
+    }
+
+    &__history{
+      display: inline-block;
+      width: 447px;
+      position: relative;
+      top: 11px;
+      left: 38px;
+    }
+
+    &__book {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      margin: 0;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $btn-back;
+        color: $btn-color;
+      }
+
+      .hover {
+        position: absolute;
+        top: 10px;
+        left: 120px;
+        bottom:10px;
+        right: 10px;
+        color: $btn-color;
+        background-color: $btn-back-hover;
+        border-radius: 25px;
+        font-size: 11px;
+        display: inline-block;
+        line-height: 24px;
+        text-align: right;
+        padding-right: 4px;
+        -webkit-transition: top .2s ease,left .2s ease,right .2s ease,bottom .2s ease;
+        transition: top .2s ease,left .2s ease,right .2s ease,bottom .2s ease;
+      }
+
+      &:hover .hover {
+        top:-1px;
+        left:-1px;
+        right:-1px;
+        bottom:-1px;
+        color: $btn-back;
+        background-color: $btn-back-hover;
+        border-radius: 25px;
+      }
+
+    }
+
+    &__copyright{
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      margin: 0;
+
+      a:hover,
+      a.visited:hover{
+        text-decoration: underline;
+      }
+
+    }
+
+    &__logo{
+      position: absolute;
+      top: auto;
+      bottom: -13px;
+      left: 50%;
+      margin: 0 0 0 25px;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: auto;
+    }
+
+    &__developer{
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      margin: 0;
+      width: auto;
+
+    a:hover,
+    a.visited:hover {
+      text-decoration: underline;
+    }
+    }
+  }
+
+}

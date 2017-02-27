@@ -21,14 +21,50 @@ $nice-checkbox-color: #000;
 /*---------- /nice-checkbox ---------*/
 
 /*---------- btn ----------*/
-$btn-back: #ff0;
-$btn-back-hover: #ffa;
-$btn-back-active: #000;
-$btn-color: #000;
-$btn-color-active: #ff0;
-
-$btn-2-back: #f00;
-$btn-2-back-hover: #f0a;
-$btn-2-back-active: #000;
-$btn-2-color-active: #f0a;
+$btn-back: #fff;
+$btn-back-hover: #377ae6;
+$btn-color: #fff;
+$btn-color-hover: #377ae6;
 /*---------- /btn ---------*/
+
+/*---------- book ----------*/
+$btn-book-span-back: #377ae6;
+$btn-book-span-color: #fff;
+/*---------- /book ---------*/
+
+/*---------- menu ----------*/
+$menu-color: #fff;
+$menu-color-hover: #ece8e8;
+$menu-color-btn: #fff;
+/*---------- /menu ---------*/
+
+/*---------- language ----------*/
+$language-color-current: #fff;
+$language-color-item: #377ae6;
+$language-color-item-border: #377ae6;
+/*---------- /language ---------*/
+
+/*---------- hero ----------*/
+$hero-color-title: #fff;
+$hero-back-btn: #377ae6;
+$hero-color-span: #fff;
+/*---------- /hero ---------*/
+
+/*---------- services ---------*/
+$services-content-color: #2d3244;
+$services-color-h2: #4e5876;
+$services-back: #fff;
+$services-back-hover: rgba(15,107,255,0.9);
+$services-color-hover: #fff;
+$services-arrow-color: #fff;
+/*---------- /services ---------*/
+
+/*---------- footer ---------*/
+$footer-back: #16171c;
+$footer-history-color: #666667;
+$footer-about-color: #fff;
+$footer-copyright-color: #747474;
+$footer-copyright-link-color: #fff;
+$footer-developer-color: #747474;
+$footer-developer-link-color: #fff;
+/*---------- /footer ---------*/

@@ -1,22 +1,24 @@
  .logo {
-    height: 55px;
-    width: 120px;
-    background: url(../img/logo.png);
-    background-size: 120px 55px;
     display: inline-block;
     position: absolute;
     top: 20px;
     left: 20px;
+   z-index:5;
+   & img{
+     height: 55px;
+     width: 120px;
+   }
   }
 
 @media (min-width: $desktop) {
   .logo {
-    height: 89px;
-    width: 195px;
-    background: url(../img/logo.png);
     display: inline-block;
     position: absolute;
     top: 38px;
     left: 0;
+    & img{
+      height: 89px;
+      width: 195px;
+    }
   }
 }

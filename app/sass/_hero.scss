@@ -1,4 +1,5 @@
 .hero{
+
   &__info {
     position: absolute;
     top: 50%;
@@ -10,16 +11,19 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 22px;
+    z-index:1;
   }
+
   &__title {
     display: inline-block;
     margin-bottom: 22px;
-    color: #fff;
+    color: $hero-color-title;
     font-family: "helveticaneue-thin", sans-serif;
     font-weight: 400;
     font-size: 22px;
     text-align: center;
   }
+
   &__play{
 
     &-btn{
@@ -27,13 +31,14 @@
       width: 58px;
       border-radius: 50%;
       background: url("../img/play.png");
-      background-color: #377ae6;
+      background-color: $hero-back-btn;
       margin: 0 auto  16px;
       display: block;
       cursor: pointer;
     }
+
     & span{
-      color:#fff;
+      color:$hero-color-span;
       font-size:13px;;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -47,6 +52,8 @@
   }
 
   @media (min-width: $desktop) {
+    position: relative;
+    min-height: 700px;
     &__info {
       position: absolute;
       top: 50%;
@@ -61,8 +68,8 @@
 
     &__title{
       display: inline-block;
-      color: #fff;
-      font-family: "helveticaneue-thin", sans-serif;
+      color: $hero-color-title;
+      font-family: "HelveticaNeue-Thin", sans-serif;
       font-weight: 400;
       font-size: 48px;
       text-align: center;
@@ -76,7 +83,7 @@
         width: 58px;
         border-radius: 50%;
         background: url("../img/play.png");
-        background-color: #377ae6;
+        background-color: $hero-back-btn;
         margin: 0 auto 16px;
         display: block;
         -webkit-transition: transform .3s ease;
@@ -89,7 +96,7 @@
     }
 
     & span{
-      color:#fff;
+      color:$hero-color-span;
       font-size:13px;;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -98,13 +105,16 @@
       font-style: normal;
       text-align: center;
       display: block;
-      opacity: 0;
-      -webkit-transition: opacity .9s ease;
-      transition: opacity .9s ease;
+      opacity: 1;
+      transition: all .5s ease;
+      transform: rotateX(90deg);
+      transform-origin: center -10px;
+      perspective: 10px;
     }
 
     .hero__play-btn:hover+span{
       opacity: 1;
+      transform: rotateX(0deg);
     }
   }
 
@@ -134,8 +144,6 @@
       z-index: -1;
       max-height: 848px;
       overflow: hidden;
-
-
 
       &__video{
         height: auto;

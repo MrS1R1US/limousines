@@ -19,7 +19,8 @@
       display: block;
       width: 100%;
       height: 1px;
-      background-color: #fff;
+      background-color: $menu-color-btn;
+      -webkit-transition: background-color 0.2s ease;
       transition: background-color 0.2s ease;
 
       &:before,
@@ -60,7 +61,7 @@
     top: 0;
     letter-spacing: 1px;
     a {
-      color: #fff;
+      color: $menu-color;
       display: block;
       text-align: center;
       padding-top: 25px;
@@ -92,11 +93,12 @@
     }
 
     .menu__wrap {
-      position: absolute;
+      background-color: rgba(0,0,0,0.96);
+
+      min-height:100vh;
+      position: fixed;
       width: 100%;
       visibility: visible;
-      background-color: rgba(0,0,0,0.8);
-      height: 100vh;
       opacity: 1;
       padding-top: 30px;
       animation-name: frames-menu;
@@ -105,7 +107,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      z-index:1;
+      z-index:2;
     }
 
 }
@@ -117,7 +119,7 @@
 @media (min-width: $desktop) {
   .menu{
     position: absolute;
-    top: 55px;
+    top: 54px;
     left: 313px;
     width: 795px;
 
@@ -136,7 +138,7 @@
 
     &__item {
       position: absolute;
-      top: -17px;
+      top: 8px;
       display: inline;
       letter-spacing: 1px;
 
@@ -145,48 +147,53 @@
       a:active {
         display: inline-block;
         position: relative;
-        color: #fff;
-        margin-right: 40px;
+        color: $menu-color;
+        margin: 0 40px 0 0;
+        padding: 0;
         text-align: center;
         font-size: 14px;
       }
 
       a::before {
+        content: "";
         display: block;
         position: absolute;
-        content: "";
         height: 1px;
         width: 0;
         background-color: #ece8e8;
-        transition: width .2s ease-in-out, left .2s ease-in-out;
-        left: 50%;
-        bottom: 0;
-      }
-
-      a::after {
-        display: block;
-        position: absolute;
-        content: "";
-        height: 1px;
-        width: 0;
-        background-color: #ece8e8;
-        transition: width .2s ease-in-out;
+        -webkit-transition: width .2s ease, left .2s ease;
+        transition: width .2s ease, left .2s ease;
         left: 50%;
         bottom: 0;
       }
 
       a:hover::before {
-        width: 50%;
+        width: 100%;
         left: 0;
       }
 
-      a:hover::after {
-        width: 50%;
+      a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 0;
+        background-color: $menu-color-hover;
+        -webkit-transition: width .2s ease, left .2s ease;
+        transition: width .2s ease, left .2s ease;
+        left: 50%;
+        top: 0;
       }
+
+      a:hover::after {
+        width: 100%;
+        left: 0;
+      }
+
 
       a:hover,
       a.visited:hover {
-        color: #ece8e8;
+        color: $menu-color-hover;
       }
     }
 

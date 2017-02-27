@@ -14,14 +14,24 @@ body{
       margin: 0 auto;
     }
   }
-  &__content{
 
+  &__footer{
+    height: 540px;
+    background-color: $footer-back;
+    width: 100%;
+    display: flex;
+
+    &-wrapper{
+      position: relative;
+      height: 285px;
+      width: 1110px;
+      margin: 15px auto 0;
+    }
   }
 }
 @media (min-width: $desktop) {
   .site {
     &__header {
-
       .header__wrapper {
         top: 0;
         left: 0;
@@ -30,10 +40,19 @@ body{
         height: 126px;
         width: 1108px;
         margin: 0 auto;
+        z-index:1;
       }
     }
-    &__content{
+    &__footer{
+      height: 540px;
+      background-color: $footer-back;
+      width: 100%;
+      display: flex;
 
+      &-wrapper{
+        width: 1110px;
+        margin: 140px auto 0;
+      }
     }
   }
 }

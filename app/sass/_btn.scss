@@ -1,38 +1,19 @@
 .btn {
   border: none;
-  height: 50px;
-  padding: 0 10px;
-  color: $btn-color;
   display: flex;
-  text-align: left;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  font-size: 14px;
   background: $btn-back;
+  color: $btn-color-hover;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.09);
+  font-size: 13px;
+  font-family: "helvetica-medium", sans-serif;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  transition: background-color .3s ease, color .3s ease;
 
-  &:hover {
-    background: $btn-back-hover;
-  }
-
-  &:active {
-    color: $btn-color-active;
-    background: $btn-back-active;
-  }
-
-  &_2 {
-    width: 150px;
-    height: 40px;
-    background: $btn-2-back;
-
-    &:hover {
-      background: $btn-2-back-hover;
-    }
-
-    &:active {
-      color: $btn-2-color-active;
-      background: $btn-2-back-active;
-    }
-  }
-
+&:hover{
+  background-color: $btn-back-hover;
+  color: $btn-color;
+}
 }

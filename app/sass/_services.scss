@@ -1,0 +1,221 @@
+.services {
+  margin: 30px auto 30px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 30px;
+
+    & h2 {
+      font-size: 24px;
+      color: $services-color-h2;
+      font-family: "helveticaneue-thin", sans-serif;
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    height: 46px;
+    padding: 0 0 0 26px;
+    width: 280px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: "helveticaneue-medium", sans-serif;
+    text-align: center;
+  }
+
+  &__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__duo{
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: space-between;
+     width: 100%;
+
+     .services__block{
+       max-width: 100%;
+       display: flex;
+       justify-content: flex-end;
+
+       img{
+         height: auto;
+         width: auto;
+       }
+
+     }
+   }
+
+  &__block {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    background-color: $services-back;
+    overflow: hidden;
+    cursor: none;
+
+    &:after{
+      content:'';
+      background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,0) 100%);
+      background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 47%,rgba(255,255,255,0) 100%);
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    & img {
+      display: block;
+      width: 100%;
+      min-height: auto;
+    }
+
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 58px;
+    left: 55px;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+    z-index: 1;
+    color: $services-content-color;
+
+    & b {
+      display: block;
+      font-size: 36px;
+      font-family: "helvetica-bold", sans-serif;
+      font-style: normal;
+    }
+
+    & i {
+      font-size: 48px;
+      font-family: "HelveticaNeue-Thin", sans-serif;
+      font-style: normal;
+    }
+  }
+
+}
+
+ @media (min-width: $desktop) {
+
+   .services {
+     width: 1110px;
+     display: block;
+     margin: 105px auto 115px;
+
+     &__header {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-bottom: 80px;
+
+       & h2 {
+         font-size: 38px;
+         color: $services-color-h2;
+         font-family: "helveticaneue-thin", sans-serif;
+         font-weight: 400;
+         margin: 0;
+       }
+     }
+
+     &__btn {
+       height: 46px;
+       padding: 0 0 0 26px;
+       width: 332px;
+       font-size: 15px;
+       text-transform: uppercase;
+       font-family: "helveticaneue-medium", sans-serif;
+       text-align: center;
+
+     }
+
+     &__duo{
+         width: 634px;
+       }
+
+     &__block {
+       height: auto;
+       width: auto;
+       max-width: 445px;
+       cursor: pointer;
+
+       &:after {
+         background: none;
+         background-color: $services-back-hover;
+         visibility: hidden;
+         opacity: 0;
+         content: '';
+         border-radius: 5px;
+         -webkit-transition: opacity .3s ease, visibility .3s ease;
+         transition: opacity .3s ease, visibility .3s ease;
+       }
+
+       &:before{
+         position: absolute;
+         right: 85px;
+         bottom: 85px;
+         width: 18px;
+         height: 18px;
+         border-top: 3px $services-arrow-color solid;
+         border-right: 3px $services-arrow-color solid;
+         transform: rotate(45deg);
+         -webkit-transform: rotate(45deg);
+         z-index: 1;
+         visibility: hidden;
+         opacity: 0;
+         -webkit-transition: right .3s ease, opacity .3s ease, visibility .3s ease;
+         transition: right .3s ease, opacity .3s ease, visibility .3s ease;
+         content: '';
+       }
+
+       &:hover {
+
+         &:after {
+           visibility: visible;
+           opacity: 1;
+         }
+
+         &:before{
+           right: 60px;
+           visibility: visible;
+           opacity: 1;
+         }
+
+         .services__content {
+           color: $services-color-hover;
+         }
+
+       }
+
+     }
+
+     &__block2 {
+       height: auto;
+       width: auto;
+       max-width: 634px;
+     }
+
+     &__block5 {
+       height: auto;
+       width: auto;
+       max-width: 634px;
+
+       .services__content {
+         position: absolute;
+         top: 60px;
+         left: 60px;
+       }
+
+     }
+   }
+ }

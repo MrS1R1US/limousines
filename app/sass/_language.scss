@@ -1,46 +1,43 @@
 .language {
   font-family: "helvetica-medium", sans-serif;
   font-size: 13px;
-  margin: 25px auto;
+  margin: 25px auto 0;
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  .icon {
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-    background-image: url(../img/languageIcon.png);
-    margin-left: 10px;
-  }
+  //.icon {
+  //  height: 20px;
+  //  width: 20px;
+  //  display: inline-block;
+  //  background-image: url(../img/languageIcon.png);
+  //  margin-left: 10px;
+  //}
 
   &__current{
-    color: #fff;
+    color: $language-color-current;
     text-transform: none;
+    cursor: pointer;
     display: flex;
     flex-direction:row;
     align-items: center;
-  }
-
-  &:hover{
-    .language__choice{
-      -webkit-transition: opacity .3s ease, visibility .3s ease;
-      transition: opacity .3s ease, visibility .3s ease;
-      visibility: visible;
-      opacity: 1;
+    & i{
+      font-style: normal;
+      display: none;
+    }
+    &::before {
+      content: attr(data-description);
     }
   }
 
-  &__choice{
+  &__item{
     text-transform: none;
-    position: absolute;
-    top: 0;
-    right: 100%;
-    visibility: hidden;
+
+    visibility: visible;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    opacity: 0;
+    justify-content: flex-start;
+    opacity: 1;
   }
 
   li {
@@ -49,46 +46,14 @@
     a:active {
       display: inline-block;
       position: relative;
-      color: #377ae6;
-      margin: 2px 10px 0;
+      color: $language-color-item;
+      margin-left:20px;
+      & span{
+        display: none;
+      }
     }
-
     a::before {
-      display: block;
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 0;
-      background-color: #377ae6;
-      transition: width .2s ease-in-out, left .2s ease-in-out;
-      left: 50%;
-      bottom: 0;
-    }
-
-    a::after {
-      display: block;
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 0;
-      background-color: #377ae6;
-      transition: width .2s ease-in-out;
-      left: 50%;
-      bottom: 0;
-    }
-
-    a:hover::before {
-      width: 50%;
-      left: 0;
-    }
-
-    a:hover::after {
-      width: 50%;
-    }
-
-    a:hover,
-    a.visited:hover {
-      color: #377ae6;
+      content: attr(data-description);
     }
   }
 }
@@ -107,29 +72,38 @@
     height:18px;
 
     .icon {
-      height: 18px;
-      width: 18px;
+      height: 20px;
+      width: 20px;
       display: inline-block;
       background-image: url(../img/languageIcon.png);
       margin-left: 10px;
     }
 
     &__current{
-      color: #fff;
-      display: inline-block;
+      color: $language-color-current;
       text-transform: none;
       cursor: pointer;
       display: flex;
       flex-direction:row;
       align-items: center;
+      & i{
+        font-style: normal;
+        display: block;
+      }
+      &::before {
+        content: '';
+      }
+    }
 
-      &:hover+.language__choice{
+    &:hover{
+      .language__item{
         visibility: visible;
         opacity: 1;
       }
     }
 
-    &__choice{
+    &__item{
+      height: 30px;
       text-transform: none;
       position: absolute;
       top: 0;
@@ -138,9 +112,10 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      opacity: 0;
       -webkit-transition: opacity .5s ease, visibility .5s ease;
       transition: opacity .5s ease, visibility .5s ease;
+      margin:0;
+      opacity: 0;
     }
 
     li{
@@ -149,8 +124,11 @@
       a:active {
         display: inline-block;
         position: relative;
-        color: #377ae6;
+        color: $language-color-item;
         margin: 2px 10px 0;
+        & span{
+          display: block;
+        }
       }
 
       a:before {
@@ -159,37 +137,17 @@
         content: "";
         height: 1px;
         width: 0;
-        background-color: #377ae6;
+        background-color: $language-color-item-border;
         transition: width .2s ease-in-out, left .2s ease-in-out;
         left: 50%;
         bottom: 0;
       }
 
-      a:after {
-        display: block;
-        position: absolute;
-        content: "";
-        height: 1px;
-        width: 0;
-        background-color: #377ae6;
-        transition: width .2s ease-in-out;
-        left: 50%;
-        bottom: 0;
-      }
-
       a:hover::before {
-        width: 50%;
+        width: 100%;
         left: 0;
       }
 
-      a:hover::after {
-        width: 50%;
-      }
-
-      a:hover,
-      a.visited:hover {
-        color: #377ae6;
-      }
     }
   }
 }
