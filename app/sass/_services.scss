@@ -109,7 +109,7 @@
  @media (min-width: $desktop) {
 
    .services {
-     min-height: calc(100vh - 525px);
+     min-height: calc(100vh - 539px);
      width: 1110px;
      display: block;
      margin: 105px auto 115px;
@@ -149,6 +149,7 @@
        width: 100%;
        max-width: 445px;
        cursor: pointer;
+       margin: 0 0 30px;
 
        &:after {
          background: none;

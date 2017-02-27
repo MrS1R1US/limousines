@@ -4,7 +4,6 @@ body{
 .site {
 
   &__header {
-
     .header__wrapper {
       top: 0;
       left: 0;
@@ -17,7 +16,7 @@ body{
   }
 
   &__footer{
-    padding: 0;
+    padding-top: 15px;
     background-color: $footer-back;
     width: 100%;
     display: flex;
@@ -40,7 +39,7 @@ body{
     }
 
     &__footer{
-      padding-bottom: 100px;
+      padding: 140px 0 114px;
       background-color: $footer-back;
       width: 100%;
       display: flex;
