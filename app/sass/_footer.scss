@@ -1,4 +1,8 @@
 .footer{
+  position: relative;
+  width: 1110px;
+  margin: 15px auto 0;
+  padding: auto;
 
   &__about{
     color: $footer-about-color;
@@ -97,6 +101,7 @@
     margin: 0 auto;
     width: 90%;
     text-align: center;
+    margin-bottom: 15px;
 
     a:link,
     a:active,
@@ -110,6 +115,9 @@
 @media (min-width: $desktop) {
 
   .footer {
+      width: 1110px;
+      margin: 140px auto 0;
+      padding-bottom: 150px;
 
     &__about {
       display: inline-block;
@@ -199,6 +207,7 @@
       right: 0;
       margin: 0;
       width: auto;
+      margin: 0;
 
     a:hover,
     a.visited:hover {
