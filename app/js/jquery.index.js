@@ -15,19 +15,21 @@ $(function(){
         
         var currentScroll = $( this ).scrollTop();
         
-        console.log( lastScrollPos,currentScroll );
+        //console.log( lastScrollPos,currentScroll );
         
         if(currentScroll >= 700) {
+            $('.site__header').addClass('fixed');
 
             if(lastScrollPos > currentScroll){
-                $('.site__header').addClass('fixed');
+                $('.fixed').addClass('fixed__active');
             } else{
-                $('.site__header').removeClass('fixed');
+                $('.fixed').removeClass('fixed__active');
             }
 
         }
         else{
             $('.site__header').removeClass('fixed');
+            $('.site__header').removeClass('fixed__active');
         }
 
         lastScrollPos = currentScroll;
