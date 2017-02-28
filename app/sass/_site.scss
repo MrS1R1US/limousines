@@ -1,6 +1,7 @@
 body{
   background-color: #f0f1f5;
 }
+
 .site {
 
   &__header {
@@ -15,6 +16,10 @@ body{
     }
   }
 
+  &__content{
+    min-height: calc(100vh - 539px);
+  }
+
   &__footer{
     padding-top: 15px;
     background-color: $footer-back;
@@ -22,6 +27,7 @@ body{
     display: flex;
   }
 }
+
 @media (min-width: $desktop) {
   .site {
 
@@ -36,8 +42,17 @@ body{
         margin: 0 auto;
         z-index:1;
       }
-    }
 
+    }
+    .fixed{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,0.9);
+      height: 130px;
+      z-index: 5;
+    }
     &__footer{
       padding: 140px 0 114px;
       background-color: $footer-back;
@@ -46,4 +61,6 @@ body{
 
     }
   }
+
 }
+

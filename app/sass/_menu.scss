@@ -72,6 +72,7 @@
   &.menu_opened{
 
     .menu__btn {
+      position: fixed;
       span {
         background-color: transparent;
 
@@ -94,7 +95,6 @@
 
     .menu__wrap {
       background-color: rgba(0,0,0,0.96);
-
       min-height:100vh;
       position: fixed;
       width: 100%;
@@ -190,12 +190,10 @@
         left: 0;
       }
 
-
       a:hover,
       a.visited:hover {
         color: $menu-color-hover;
       }
     }
-
   }
 }

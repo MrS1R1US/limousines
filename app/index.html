@@ -46,22 +46,33 @@
                         <!-- /menu__item -->
 
                         <!-- bookbutton -->
-                        <a href="#" class="btn book"><i>BOOK NOW</i><span>7/7</span><div class="hover"></div></a>
+                        <a href="#" class="btn btn__book">
+                            <i>BOOK NOW</i>
+                            <span>7/7</span>
+                            <div class="hover"></div>
+                        </a>
                         <!-- /bookbutton -->
 
                         <!-- language -->
                         <div class="language">
 
                             <!-- language__current -->
-                            <div class="language__current" data-description="Eng"><i>English</i><span class="icon"></span></div>
+                            <div class="language__current" data-description="Eng">
+                                <i>English</i>
+
+                                <!-- icon -->
+                                <span class="icon"></span>
+                                <!-- /icon -->
+
+                            </div>
                             <!-- /language__current -->
 
-                                <!-- language__choice -->
-                                <ul class="language__item">
+                            <!-- language__choice -->
+                            <ul class="language__item">
                                     <li><a href="#" data-description="Nld"><span>Néerlandais</span></a></li>
                                     <li><a href="#" data-description="Fra"><span>Français</span></a></li>
                                 </ul>
-                                <!-- /language__choice -->
+                            <!-- /language__choice -->
 
                         </div>
                         <!-- /language -->
@@ -78,116 +89,135 @@
         </header>
         <!-- /header -->
 
-        <!-- hero -->
-        <div class="hero">
+        <!-- site__content -->
+        <div class="site__content">
 
-            <!-- hero__info -->
-            <div class="hero__info">
+            <!-- hero -->
+            <div class="hero">
 
-                <!-- hero__info__h1 -->
-                <div class="hero__title">
-                    <p>Where services meets excellence</p>
+                <!-- hero__info -->
+                <div class="hero__info">
+
+                    <!-- hero__info__title -->
+                    <div class="hero__title">
+                        <p>Where services meets excellence</p>
+                    </div>
+                    <!-- /hero__info__title -->
+
+                    <!-- hero__play -->
+                    <div class="hero__play">
+
+                        <!-- hero__play-btn -->
+                        <a href="#" class="hero__play-btn popup__open" data-popup="example"></a>
+                        <!-- /hero__play-btn -->
+
+                        <span>Discover our fleet in action</span>
+
+                    </div>
+                    <!-- /hero__play -->
+
                 </div>
-                <!-- /hero__info__h1 -->
+                <!-- /hero__info -->
 
-                <!-- hero__play -->
-                <div class="hero__play">
-                    <a href="#" class="hero__play-btn popup__open" data-popup="example"></a>
-                    <span>Discover our fleet in action</span>
+                <!-- hero__layout -->
+                <div class="hero__layout">
+
+                    <!-- hero__layout__video -->
+                    <video class="hero__layout__video" loop preload autoplay muted>
+                        <source src="video/Limousines.mp4" type="video/mp4">
+                    </video>
+                    <!-- /hero__layout__video -->
+
                 </div>
-                <!-- /hero__play -->
+                <!-- /hero__layout -->
 
             </div>
-            <!-- /hero__info -->
+            <!-- /hero -->
 
-            <!-- hero__layout -->
-            <div class="hero__layout">
-                <video class="hero__layout__video" loop preload autoplay muted>
-                    <source src="video/Limousines.mp4" type="video/mp4">
-                </video>
-            </div>
-            <!-- /hero__layout -->
+            <!-- services -->
+            <section class="services">
+
+                <!-- services_header -->
+                <div class="services__header">
+
+                    <!-- services_title -->
+                    <h2 class="services__title">How can we help you ?</h2>
+                    <!-- /services_title -->
+
+                    <!-- btn services -->
+                    <a href="#" class="btn services__btn">
+                        Discover our full service range
+                    </a>
+                    <!-- /btn services -->
+                </div>
+                <!-- /services_header -->
+
+                <!-- services_blocks -->
+                <div class="services__blocks">
+                    <!-- services__block1 -->
+                    <div class="services__block">
+                        <img src="../img/block1_bg.jpg" alt="Airport Transfer">
+                        <span class="services__content">
+                                <b>Airport</b>
+                                <i>Transfer</i>
+                            </span>
+                    </div>
+                    <!-- /services__block1 -->
+
+                    <!-- services__block2 -->
+                    <div class="services__block services__block2">
+                        <img src="../img/block2_bg.jpg" alt="Midi Station Transfer">
+                        <span class="services__content">
+                                <b>Midi Station</b>
+                                <i>Transfer</i>
+                            </span>
+                    </div>
+                    <!-- /services__block2 -->
+
+                    <!-- services__blocks-duo -->
+                    <div class="services__duo">
+
+                        <!-- services__block3 -->
+                        <div class="services__block">
+                            <img src="../img/block3_bg.jpg" alt="Corporate Meetings">
+                            <span class="services__content">
+                                <b>Corporate</b>
+                                <i>Meetings</i>
+                            </span>
+                        </div>
+                        <!-- /services__block3 -->
+
+                        <!-- services__block4 -->
+                        <div class="services__block">
+                            <img src="../img/block4_bg.jpg" alt="Standby Driver">
+                            <span class="services__content">
+                                <b>Standby</b>
+                                <i>Driver</i>
+                            </span>
+                        </div>
+                        <!-- /services__block4 -->
+
+                    </div>
+                    <!-- /services__blocks-duo -->
+
+                    <!-- services__block5 -->
+                    <div class="services__block services__block5">
+                        <img src="../img/block5_bg.jpg" alt="Standby Driver">
+                        <span class="services__content">
+                                <b>Personalized</b>
+                                <i>Event</i>
+                            </span>
+                    </div>
+                    <!-- /services__block5 -->
+
+                </div>
+                <!-- /services_blocks -->
+
+            </section>
+            <!-- /services -->
 
         </div>
-        <!-- /hero -->
-
-        <!-- services -->
-        <section class="services">
-
-            <!-- services_header -->
-            <div class="services__header">
-                <h2>How can we help you ?</h2>
-                <!-- btn services -->
-                <a href="#" class="btn services__btn">
-                    Discover our full service range
-                </a>
-                <!-- /btn services -->
-            </div>
-            <!-- /services_header -->
-
-            <!-- services_blocks -->
-            <div class="services__blocks">
-                <!-- services__block1 -->
-                <div class="services__block">
-                    <img src="../img/block1_bg.jpg" alt="Airport Transfer">
-                    <span class="services__content">
-                        <b>Airport</b>
-						<i>Transfer</i>
-                    </span>
-                </div>
-                <!-- /services__block1 -->
-
-                <!-- services__block2 -->
-                <div class="services__block services__block2">
-                    <img src="../img/block2_bg.jpg" alt="Midi Station Transfer">
-                    <span class="services__content">
-                        <b>Midi Station</b>
-						<i>Transfer</i>
-                    </span>
-                </div>
-                <!-- /services__block2 -->
-
-                <!-- services__blocks-duo -->
-                <div class="services__duo">
-
-                    <!-- services__block3 -->
-                    <div class="services__block">
-                        <img src="../img/block3_bg.jpg" alt="Corporate Meetings">
-                        <span class="services__content">
-                        <b>Corporate</b>
-						<i>Meetings</i>
-                    </span>
-                    </div>
-                    <!-- /services__block3 -->
-
-                    <!-- services__block4 -->
-                    <div class="services__block">
-                        <img src="../img/block4_bg.jpg" alt="Standby Driver">
-                        <span class="services__content">
-                        <b>Standby</b>
-						<i>Driver</i>
-                    </span>
-                    </div>
-                    <!-- /services__block4 -->
-
-                </div>
-                <!-- /services__blocks-duo -->
-
-                <!-- services__block5 -->
-                <div class="services__block services__block5">
-                    <img src="../img/block5_bg.jpg" alt="Standby Driver">
-                    <span class="services__content">
-                        <b>Personalized</b>
-						<i>Event</i>
-                    </span>
-                </div>
-                <!-- /services__block5 -->
-
-            </div>
-            <!-- /services_blocks -->
-
-        </section>
-        <!-- /services -->
+        <!-- /site__content -->
 
         <!-- footer -->
         <footer class="site__footer">
@@ -197,23 +227,32 @@
 
                 <!-- footer__about -->
                 <div class="footer__about">
-                    Belgium Limousine Service est une société de limousine à Bruxelles, spécialisée dans la location de limousine avec chauffeur.
+                    Belgium Limousine Service est une société de limousine à Bruxelles,
+                    spécialisée dans la location de limousine avec chauffeur.
                 </div>
                 <!-- /footer__about -->
                 
                 <!-- footer__history -->
                 <div class="footer__history">
-                    Nous sommes dans le secteur du transport de personnes depuis 1986, en Belgique et dans le Benelux, ce qui fait de Belgium Limousine Services, membre du Belgium Limousine Association, un des pionniers du service limousine à Bruxelles avec chauffeur.
+                    Nous sommes dans le secteur du transport de personnes depuis 1986,
+                    en Belgique et dans le Benelux, ce qui fait de Belgium Limousine Services,
+                    membre du Belgium Limousine Association, un des pionniers du service
+                    limousine à Bruxelles avec chauffeur.
                 </div>
                 <!-- /footer__history -->
 
-                <!-- footer__book -->
-                <a href="#" class="btn footer__book"><i>BOOK NOW</i><span>7/7</span><div class="hover"></div></a>
-                <!-- /footer__book -->
+                <!-- btn -->
+                <a href="#" class="btn btn__book-footer">
+                    <i>BOOK NOW</i>
+                    <span>7/7</span>
+                    <div class="hover"></div>
+                </a>
+                <!-- /btn -->
 
                 <!-- footer__copyright -->
                 <div class="footer__copyright">
-                    Copyright Belgium Limousine Services. <a href="#" target="_blank">Read terms</a>
+                    Copyright Belgium Limousine Services.
+                    <a href="#" target="_blank">Read terms</a>
                 </div>
                 <!-- /footer__copyright -->
 
@@ -223,7 +262,8 @@
 
                 <!-- footer__developer -->
                 <div class="footer__developer">
-                    Website carefully crafted by <a href="#" target="_blank">ergonomic</a>
+                    Website carefully crafted by
+                    <a href="#" target="_blank">ergonomic</a>
                 </div>
                 <!-- /footer__developer -->
                 

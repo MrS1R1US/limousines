@@ -6,19 +6,19 @@
     flex-direction: column;
     align-items:center;
     margin-bottom: 30px;
+  }
 
-    & h2 {
-      font-size: 24px;
-      color: $services-color-h2;
-      font-family: "helveticaneue-thin", sans-serif;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
+  &__title {
+    font-size: 24px;
+    color: $services-color-h2;
+    font-family: "helveticaneue-thin", sans-serif;
+    font-weight: 400;
+    margin-bottom: 30px;
   }
 
   &__btn {
     height: 46px;
-    padding: 0 0 0 26px;
+    padding: 0 0 0 18px;
     width: 280px;
     font-size: 13px;
     text-transform: uppercase;
@@ -109,7 +109,6 @@
  @media (min-width: $desktop) {
 
    .services {
-     min-height: calc(100vh - 539px);
      width: 1110px;
      display: block;
      margin: 105px auto 115px;
@@ -119,14 +118,14 @@
        flex-direction: row;
        justify-content: space-between;
        margin-bottom: 80px;
+     }
 
-       & h2 {
-         font-size: 38px;
-         color: $services-color-h2;
-         font-family: "helveticaneue-thin", sans-serif;
-         font-weight: 400;
-         margin: 0;
-       }
+     &__title {
+       font-size: 38px;
+       color: $services-color-h2;
+       font-family: "helveticaneue-thin", sans-serif;
+       font-weight: 400;
+       margin: 0;
      }
 
      &__btn {
