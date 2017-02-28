@@ -7,17 +7,32 @@ $('.menu__btn').on('click', function(){
     }
 })
 
-// $(function(){
-//     $(window).scroll(function() {
-//         if($(this).scroll() > lastScrollTop)) {
-//             $('.site__header').addClass('fixed');
-//
-//
-//         }
-//         else{
-//             $('.site__header').removeClass('fixed');
-//         }
-//     });
-// });
+$(function(){
+    
+    var lastScrollPos = 0;
+
+    $( window ).scroll( function() {
+        
+        var currentScroll = $( this ).scrollTop();
+        
+        console.log( lastScrollPos,currentScroll );
+        
+        if(currentScroll >= 700) {
+
+            if(lastScrollPos > currentScroll){
+                $('.site__header').addClass('fixed');
+            } else{
+                $('.site__header').removeClass('fixed');
+            }
+
+        }
+        else{
+            $('.site__header').removeClass('fixed');
+        }
+
+        lastScrollPos = currentScroll;
+
+    });
+});
 
 /*---------- /Открытие мобильного меню ---------*/

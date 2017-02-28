@@ -50,8 +50,29 @@ body{
       left: 0;
       right: 0;
       background-color: rgba(0,0,0,0.9);
-      height: 130px;
+      height: 80px;
       z-index: 5;
+      -webkit-transition: background-color .3s ease;
+      transition: background-color .3s ease;
+
+      .logo {
+        display: inline-block;
+        position: absolute;
+        top: 11px;
+        left: 20px;
+        z-index:5;
+        & img{
+          height: 55px;
+          width: 120px;
+        }
+      }
+      .menu{
+        top: 25px;
+        .language{
+          visibility: hidden;
+          opacity:0;
+        }
+      }
     }
     &__footer{
       padding: 140px 0 114px;
